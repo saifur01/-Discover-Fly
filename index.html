@@ -121,13 +121,13 @@
     <script>
        
 
-//        document.getElementById('first-increase').addEventListener('click',function(){
-//             eventManager('first', true);
-//         })
+       document.getElementById('first-increase').addEventListener('click',function(){
+            eventHandler( true);
+        })
 
-//        document.getElementById('first-decrease').addEventListener('click',function(){
-//            eventManager('first', false);
-//        })
+       document.getElementById('first-decrease').addEventListener('click',function(){
+           eventHandler( false);
+       })
 
 // function eventHandler(PriceIncrease){
 //     const firstInput = document.getElementById ('first-input');
@@ -151,7 +151,7 @@
 // }
      
 
-    
+
     
         //  first Class Ticket price
         document.getElementById('first-increase').addEventListener('click',function(){
@@ -193,22 +193,24 @@
 
         // total Calculation
       
-        document.getElementById('subTotal').addEventListener('click',function(){
-        const subTotal = document.getElementById('subTotal').innerText;
+        function total(){
+            const subTotal = document.getElementById('subTotal').innerText;
         const firstInput = document.getElementById('firstInput').value;
-        const economyInput = document.getElementById('firstInput').value;
+        const economyInput = document.getElementById('first-Input').value;
 
-        const subTotalAmount = firstInput * 150 + economyInput * 100;
+        const subTotalAmount = firstInput * 150 + firstInput * 100;
 
         document.getElementById('subTotal').innerText = '$' + subTotalAmount;
         const vat = document.getElementById('Vat').innerText;
         const totalVat = subTotalAmount * 0.1;
-        document.getElementById('vat').innerText = '$' + totalVat;
+        document.getElementById('Vat').innerText = '$' + Vat;
         const totalPrice = document.getElementById('totalPrice').innerText;
         const grandTotal = subTotal + totalVat;
         document.getElementById('totalPrice').innerHTML = '$' + grandTotal;
 
-        });
+        }
+        
+        
 
      
        
